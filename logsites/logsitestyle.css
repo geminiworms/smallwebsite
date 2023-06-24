@@ -1,0 +1,31 @@
+
+    
+    body{
+      font-family: monospace;
+    }
+    
+    header{
+      text-align: left;
+      margin: 1em;
+    }
+    
+    /* code.js */
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .item {
+      width: 200px;
+    }
+    
+    /* codeusingtable.js */
+    table{
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    td{
+      padding: 6px;
+    }
