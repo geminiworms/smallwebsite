@@ -1,1 +1,53 @@
-<--! this is the style code -->
+    
+    body{
+      font-family: monospace;
+      background-color: #fae8e8;
+    }
+    
+    header{
+      text-align: center;
+      margin: 1em;
+    }
+    
+    h1{
+      font-size:30px;
+      color:black;
+      font-family: circular;
+    }
+
+    h3{
+      font-size:18px;
+      color:black;
+    }
+    
+    h4{
+      font-size:15px;
+      line-height: 0.25;
+    }
+    
+    p{
+      font-size:12px;
+      line-height: normal;
+      color:black;
+    }
+
+    /* code.js */
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .item {
+      width: 200px;
+    }
+    
+    /* codeusingtable.js */
+    table{
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    td{
+      padding: 6px;
+    }
