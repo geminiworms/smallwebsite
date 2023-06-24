@@ -2,6 +2,9 @@
     body{
       font-family: monospace;
       background-color: #fae8e8;
+      max-width: 60%;
+      text-align: center;
+      margin: 0 auto;
     }
     
     header{
@@ -12,7 +15,7 @@
     h1{
       font-size:30px;
       color:black;
-      font-family: circular;
+      font-family: sans-serif;
     }
 
     h3{
@@ -29,6 +32,14 @@
       font-size:12px;
       line-height: normal;
       color:black;
+    }
+
+    a {
+    color:#e3245e; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: #70132f; /* Link color for visited links */
     }
 
     /* code.js */
@@ -50,4 +61,22 @@
     
     td{
       padding: 6px;
+    }
+
+/* for columns */
+ .container {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .left-column {
+      flex: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .right-column {
+      flex: 50%;
+      padding: 10px;
+      box-sizing: border-box;
     }
