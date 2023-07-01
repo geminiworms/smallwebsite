@@ -33,6 +33,7 @@
       font-size:12px;
       line-height: normal;
       color:white;
+      overflow-wrap: break-word;
     }
     a {
     color:white; /* Link color for unvisited links */
