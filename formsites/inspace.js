@@ -9,6 +9,7 @@ function getRandomInt(min, max) {
 /* this is adapted from chia amisola's "clouds" site, so some variable names carried through*/
 
 var SPREADSHEET_ID_AND_TAB = "1RY2w7RhE74OnvHgWiEbqCfhJGf4eKmFHndcn6jIIup0/1";
+
 $(document).ready(function () {
   
   
@@ -44,7 +45,7 @@ $("#clouds").on("click", ".cloud", function(){
   $("#look").show();
   
   // also, mark that cloud as seen
- $("#clouds .cloud").attr("seen", "");
+  $(this).attr("seen", "");
   
 });
 
