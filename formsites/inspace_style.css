@@ -1,0 +1,152 @@
+    
+    body{
+      font-family: monospace;
+      background-color: #13141a;
+      max-width: 75%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    header{
+      text-align: center;
+      margin: 1em;
+    }
+    
+    h1{
+      font-size:30px;
+      color:white;
+      font-family: sans-serif;
+    }
+
+    h3{
+      font-size:18px;
+      color:white;
+    }
+    
+    h4{
+      font-size:15px;
+      color: white;
+
+    }
+    
+    p{
+      font-size:12px;
+      line-height: normal;
+      color:white;
+    }
+    a {
+    color:white; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: #e0ae22; /* Link color for visited links */
+    }
+
+#clouds{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;left: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  z-index: -1;
+  color: white;
+}
+
+
+#clouds .cloud{
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  color: white;
+}
+
+#clouds .cloud[seen]{
+  opacity: 0.2;
+  color: white;
+}
+
+.cloud .emoji{
+  font-size: 32px;
+  color: white;
+}
+
+#clouds .cloud p{
+  display: none;
+  font-size: .6rem;
+  margin: 0;
+  color: white;
+}
+
+/* cloud sizes 
+.cloud.big{
+  transform: scale(1.8);
+}
+
+.cloud.normal{
+
+}
+
+.cloud.big{
+  transform: scale(0.6);
+} */
+
+/* Filter the clouds 
+
+#filter{
+  position: fixed;
+  bottom: 0; left: 0;
+  width: 100%;
+  padding: 1rem;
+   text-align: center;
+}
+
+#filter button{
+  border: 0;
+  background: none;
+  font-family: monospace;
+  padding: .5rem;
+  margin: 0 .5rem;
+  cursor: pointer;
+}
+*/
+
+/* Look at a cloud */
+
+#look {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the content vertically and horizontally */
+  z-index: 9999; /* Ensure the card appears on top of other elements */
+}
+
+#look .wrapper {
+  max-width: 90%;
+  width: 350px;
+  background: white;
+  padding: 1em;
+  border-radius: 5px; /* Add border radius for a card-like appearance */
+}
+
+#look .cloud {
+  text-align: center;
+}
+
+#look .cloud p {
+  margin: 0; /* Remove default margin for the paragraph inside the cloud */
+  color: black
+}
+
+#look button[hide] {
+  margin-top: 1em; /* Add some spacing between the paragraph and the button */
+}
+
+
