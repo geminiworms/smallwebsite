@@ -48,6 +48,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  margin-top: 20px;
   top: 0;left: 0;
   padding: 1em;
   box-sizing: border-box;
