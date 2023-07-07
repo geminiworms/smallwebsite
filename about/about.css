@@ -42,12 +42,84 @@
     color: purple; /* Link color for visited links */
     }
 
+/* image and icon formatting */
+
+#image-1{
+  position: absolute;
+  width: auto;
+  height: 50%;
+  top: 5%;
+  left: 5%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+#image-2{
+  position: absolute;
+  width: 15%;
+  height: auto;
+  top: 65%;
+  left: 30%;
+  z-index: -1;
+}
+
+#image-3{
+  position: absolute;
+  width: auto;
+  height: 20%;
+  top: 10%;
+  left: 55%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+#image-4{
+  position: absolute;
+  width: auto;
+  height: 50%;
+  top: 40%;
+  left: 75%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+#icon-1{
+  position: absolute;
+  width: auto;
+  height: 30%;
+  top: 2%;
+  left: 75%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+#icon-2{
+  position: absolute;
+  width: auto;
+  height: 25%;
+  top: 55%;
+  left: 12%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+#icon-3{
+  position: absolute;
+  width: 50%;
+  height: auto;
+  top: 60%;
+  left: 50%;
+  bottom: 30%;
+  z-index: -1;
+}
+
+
 /* Styles for the pop-up window */
 #popup {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 20%;
-  left: 20%;
+  left: 30%;
   justify-content: center;
   align-items: center;
   text-align: center;
