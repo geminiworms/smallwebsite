@@ -92,6 +92,7 @@ header {
 .image1 {
   /* worm */
   position: absolute;
+  cursor: pointer;
   top: 10%;
   left: 14%;
   width: 300px;
@@ -109,6 +110,7 @@ header {
 .image2 {
   /* sheetsites */
   position: absolute;
+  cursor: pointer;
   top: 30%;
   left: 67%;
   width: 200px;
@@ -126,6 +128,7 @@ header {
 .image3 {
   /* resources */
   position: absolute;
+  cursor: pointer;
   top: 62%;
   left: 20%;
   width: 350px;
@@ -143,6 +146,7 @@ header {
 .image4 {
   /* ethos */
   position: absolute;
+  cursor: pointer;
   top: 60%;
   left: 55%;
   width: 250px;
