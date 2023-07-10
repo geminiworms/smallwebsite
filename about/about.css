@@ -44,7 +44,7 @@
 
 /* image and icon formatting */
 
-#image-1{
+#image-1{  /* photobooth pic */
   position: absolute;
   width: auto;
   height: 50%;
@@ -54,7 +54,7 @@
   z-index: -1;
 }
 
-#image-2{
+#image-2{ /*selfie w boson */
   position: absolute;
   width: 15%;
   height: auto;
@@ -63,7 +63,7 @@
   z-index: -1;
 }
 
-#image-3{
+#image-3{ /* boson */
   position: absolute;
   width: auto;
   height: 20%;
@@ -73,7 +73,7 @@
   z-index: -1;
 }
 
-#image-4{
+#image-4{ /* mirror photo */
   position: absolute;
   width: auto;
   height: 50%;
@@ -118,8 +118,8 @@
 #popup {
   display: none;
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 50%;
+  left: 60%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -151,6 +151,7 @@
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
+  float: right;
 }
 
 #popup-next {
@@ -171,9 +172,7 @@
   background-color: #ccc;
 }
 
-#popup-close {
-  float: right;
-}
+
 
 .popup-title-bar {
   background-color: #ccc;
