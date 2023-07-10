@@ -8,6 +8,7 @@ function getRandomInt(min, max) {
 
 /* this is adapted from chia amisola's "clouds" site, so some variable names carried through*/
 
+// spreadsheet load and read 
 var SPREADSHEET_ID_AND_TAB = "1RY2w7RhE74OnvHgWiEbqCfhJGf4eKmFHndcn6jIIup0/1";
 
 $(document).ready(function () {

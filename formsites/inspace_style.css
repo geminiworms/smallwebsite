@@ -48,8 +48,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  margin-top: 20px;
-  top: 0;left: 0;
+  top: 20%;left: 0;
   padding: 1em;
   box-sizing: border-box;
   z-index: -1;
@@ -72,7 +71,7 @@
 }
 
 .cloud .emoji{
-  font-size: 32px;
+  font-size: 20px;
   color: white;
 }
 
@@ -149,6 +148,7 @@
 }
 
 #look button[hide] {
+  font-family: monospace;
   margin-top: 1em; /* Add some spacing between the paragraph and the button */
 }
 
