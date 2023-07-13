@@ -1,0 +1,217 @@
+/* loading in assets */
+
+@font-face {
+  font-family: '000webfont';
+  src: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/000webfont.ttf?v=1689018980143') format('ttf');
+}
+
+@font-face {
+  font-family: 'basiic';
+  src: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/basiic.ttf?v=1689020320109') format('ttf');
+}
+
+@font-face {
+  font-family: 'romanceA';
+  src: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/RomanceA.ttf?v=1689019118013') format('ttf');
+}
+
+
+
+
+/* page styling */
+
+* {
+   cursor: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_bow-norm.cur?v=1689064628799'),auto;
+}
+
+    body{
+      background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_pinkbg-1.jpg?v=1689021325106');
+      background-repeat: repeat;
+      font-family: 'basiic', '000webfont', monospace;
+      font-size: 100%;
+      color: #ff3686;
+      background-color: #fae8e8;
+      max-width: 75%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    
+    header{
+      text-align: center;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    footer{
+      text-align: center;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    a {
+    cursor: url(https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_Point-Normal-Select.cur?v=1689063698584), auto;
+    color:#e3245e; /* Link color for unvisited links */
+    }
+
+    a:hover {
+    cursor: url(https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_Point-Normal-Select.cur?v=1689063698584), auto;
+    }
+
+    a:visited {
+    color: #70132f; /* Link color for visited links */
+    }
+    
+    h1{
+      font-family: 'romanceA', 'basiic', monospace;
+      font-size: 200%;
+      color:#ff3686;
+      padding: 0px;
+    }
+
+    h2{
+      font-size: 200%;
+      color:#ff3686;
+      padding: 0px;
+    }
+
+    h3{
+      font-size: 150% ;
+      color:#ff3686;
+      padding: 0px;
+    }
+    
+    h4{
+      font-size: 125%;
+      color:#ff3686;
+      padding: 0px;
+
+    }
+    
+    p{
+      font-size: auto;
+      line-height: normal;
+      color:#ff3686;
+    }
+
+
+
+  
+/* for columns */
+/* Z INDEX -1 */
+
+ .container {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-direction: row;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+
+ .container img {
+    margin-left: 0;
+    margin-right: 0;
+    
+  }
+
+    .left-column {
+      background-color: #fff2f4;
+      border-radius: 10px;
+      flex: 20%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 2px dotted #ff3686;
+      height: 650px; /* Set a fixed height for each column */
+      overflow: auto; /* Enable scrolling when content exceeds the height */
+      overflow-x: hidden;
+    }
+
+    .middle-column {
+      background-color: #fff2f4;
+      border-radius: 10px;
+      flex: 60%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 2px dotted #ff3686;
+      height: 650px; /* Set a fixed height for each column */
+      overflow: auto; /* Enable scrolling when content exceeds the height */
+      overflow-x: hidden;
+      margin-left: 10px; /* Add left margin */
+      margin-right: 10px; /* Add right margin */
+      
+    }
+
+    .right-column {
+      background-color: #fff2f4;
+      border-radius: 10px;
+      flex: 20%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 2px dotted #ff3686;
+      height: 650px; /* Set a fixed height for each column */
+      overflow: auto; /* Enable scrolling when content exceeds the height */ 
+      overflow-x: hidden;
+    }
+
+/* floating assets z-index: 0 */
+.image-wrapper1 {
+  /* home */
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}
+
+.image-wrapper2 {
+  /* diary */
+  position: absolute;
+  top: 20%;
+  left: 78%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}
+
+.image-wrapper3 {
+  /* doll1 */
+  position: absolute;
+  top: 68%;
+  left: 10%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}
+
+.image-wrapper4 {
+  /* pink bow */
+  position: absolute;
+  top: 7%;
+  left: 66%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}
+
+.image-wrapper5 {
+  /* computer */
+  position: absolute;
+  top: 19%;
+  left: 84%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}
+
+.image-wrapper6 {
+  /* camera */
+  position: absolute;
+  top: 27%;
+  left: 83%;
+  width: 20px; /* Adjust the width to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
+  z-index: 0;
+}

@@ -1,0 +1,365 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link id="favicon" rel="icon" href="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_favicon.gif?v=1689221974735" type="image/x-icon">
+  <title>ʕ˵•ₒ•˵ʔ ♡♡♡ GIRLNET</title> <!-- dont forget to change this -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+<!--   styling goes here   -->
+  <link rel="stylesheet" href="inspire.css" type="text/css" />
+
+<!--obnoxious block of code to make a glitter cursor happening now-->
+    <script type="text/javascript">
+// <![CDATA[
+var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+var sparkles=50;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+*(c)2005-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    rats.style.zIndex="999";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y+1)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    starx[i]+=(i%5-2)/5;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    tinyx[i]+=(i%5-2)/5;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  if (e) {
+    y=e.pageY;
+    x=e.pageX;
+  }
+  else {
+    set_scroll();
+    y=event.y+sdown;
+    x=event.x+sleft;
+  }
+}
+
+window.onscroll=set_scroll;
+function set_scroll() {
+  if (typeof(self.pageYOffset)=='number') {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+    sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  var sw_min=999999;
+  var sh_min=999999;
+  if (document.documentElement && document.documentElement.clientWidth) {
+    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+  }
+  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+  }
+  if (document.body.clientWidth) {
+    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+  }
+  if (sw_min==999999 || sh_min==999999) {
+    sw_min=800;
+    sh_min=600;
+  }
+  swide=sw_min;
+  shigh=sh_min;
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  return (div);
+}
+
+function newColour() {
+  var c=new Array();
+  c[0]=255;
+  c[1]=Math.floor(Math.random()*256);
+  c[2]=Math.floor(Math.random()*(256-c[1]/2));
+  c.sort(function(){return (0.5 - Math.random());});
+  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+}
+// ]]>
+</script>
+    
+    
+  </head>
+
+<!-- the rest of the page -->  
+<body>
+
+<header>
+<a ><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_inspire-wordart1.png?v=1689154200472" alt="Make your own website" width="1000px" height="auto" border="0" /></a>
+  <h2> click the stickers to learn more </h2>
+</header>
+ <div class="container">
+<h4> i think feelings like digital burn out exist because we are only offered a premade internet manufactured by an anonymous party that claims to understand us. when we create our own spaces, the internet becomes a home to build and a medium for practicing our identities. <br>
+<a href="/girlnet/home.html" target="_self">return home</a>
+   </h4>
+  </div>
+  
+  
+  <!-- STICKERS -->
+
+<!--lisa frank tiger-->
+<img id="image1" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker1.png?v=1689151645310" class="popup-image image1" data-popup="#popup1">
+<div id="popup1" class="popup">
+  <div class="popup-content">
+    <h1> girlnet credits </h1>
+    <p> i've been sourcing a lot of these graphics and add ons from other websites and digital collections in this <a href="https://docs.google.com/spreadsheets/d/1V8moLOaOgFvTYXHiO15iakgigR_H7TVirRqCJVA55NY/edit?usp=sharing" target="_blank">google spreadsheet</a> that maybe i'll try to make into a nice page one day?
+    </p>
+    <button class="popup-close">X</button>
+  </div>
+</div>
+
+<!--hummingbird-->
+<img id="image2" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker2.png?v=1689151645696" class="popup-image image2" data-popup="#popup2">
+<div id="popup2" class="popup">
+  <div class="popup-content">
+    <h1> do not fear html/css </h1>
+    <p> code is just the language we use to talk to our computers; there’s vocabulary and grammatical rules you have to follow to make sure you are understood of course, but these rules are repetitive and once you get a hang of things, you’ll be surprised how simple it is. <br><br>
+html/css is probably the most straightforward language (from my experience). if i had to give it a metaphor, it’s like communicating exclusively with those little word magnets on a refrigerator. the great thing about working in html/css is that everything’s been done before (maybe not everything, but probably a good amount); you just take those pieces and move them around as much as you need to. unless i’m doing something a little ambitious, i am never actually typing out my own code letter by letter. there are constructs and pieces that are floating around on internet forums and html libraries that just require a simple copy and paste. of course, there is a small learning curve to know where exactly things should be moved into, and what pieces are more or less compatible with others… but those are things you will learn as you go. <br><br>
+there are two things that will significantly push your fluency in html/css: <br><br>
+✿ messing around in <a href="https://www.w3schools.com/html/" target="_blank">w3schools</a><br>
+✿ building your own html page<br><br>
+i’ve got so many multi-hour videos saved in my youtube watch later playlist with titles like “web building bootcamp!” and “html/css guide for dummies!” but i’ve never watched a minute of any of them. tailor your experience to your learning style, but i promise you that just jumping in will be way more productive.</p>
+    <button class="popup-close">X</button>
+  </div>
+</div>  
+
+<!--bears-->
+<img id="image3" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker10.png?v=1689151649427" class="popup-image image3" data-popup="#popup3">
+<div id="popup3" class="popup">
+  <div class="popup-content">
+    <h1> tips </h1>
+    <p>✿ write down all your ideas even ones that feel overly ambitious… the more you build and play with simple pages the more tools you acquire to materialize these big ideas (and the chances are, they are not as complex as you think)<br><br>
+✿ start with a visual: i always make a rough sketch of my page’s end goal on paper before i begin then i jot down notes about how i want it to behave. i think by doing this first, i have an idea of the big picture <br><br>
+✿ use chatgpt B) <br><br>
+✿ find a friend! sitebuilding is tough to approach alone because it’s easy to get lost in your own weeds… a fresh brain to talk to is really helpful (hmu!) <br><br>
+✿ manage your assets and directories as you go… if you dont do it now i promise you will never go back to do it again. this means use intuitive naming conventions for your assets, get rid of keyboard smashes, have dedicated “placeholders”, etc.</p>
+    <button class="popup-close">X</button>
+  </div>
+</div>  
+
+<!--berry good-->
+<img id="image4" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker13.png?v=1689185784966" class="popup-image image4" data-popup="#popup4">
+<div id="popup4" class="popup">
+  <div class="popup-content">
+     <h1> tldr; </h1>
+    <p> 
+✿ the best way to learn how to build a website is to build a website  <br><br>
+✿ make a github account <br><br>
+✿ find some friends (i can be one !) <br><br>
+✿ have fun and i dont mean that in a tacky way i mean that in a reclaim digital personality and resist the sterilization of technology way <br>
+ </p>
+    <button class="popup-close">X</button>
+  </div>
+</div>  
+
+<!--black and orange cat-->
+<img id="image5" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker3.png?v=1689151646169" class="popup-image image5" data-popup="#popup5">
+<div id="popup5" class="popup">
+  <div class="popup-content">
+     <h1> pieces of a website </h1>
+    <p> ✿ <b>the repository</b> is the house that holds your whole website. in this analogy, the house is like your www.website.com and each room in the house is a page. if you’re building from the ground up, you have total control over how cohesive your house looks from room to room. there are no rules!  <br><br>
+✿ <b>the code</b> mostly html/css and maybe some javascript if you want to add in some cool elements. each page in your site will have the .html file (which is the one that gets “viewed” on the internet), and a .css file (which stylizes the html). the .js is optional. for reference, the girlnet homepage is html/css only. for this current page, i used .js to create these popup windows.<br><br>
+✿ <b>the domain</b> is probably something you’re going to try to worry about too early on because me too… but no one really talks about it enough bc you realize how unimportant it is in hindsight. i figured i’d throw it in though. personally, i buy my domains on google domains… this is your “house address” if we keep going with this analogy. you don’t need a new address for every room, just the big main house. i pay a yearly fee to keep ownership of my domains, then everything after that is free. there are some hoops to move through to connect your repository to your domain and i use <a href="https://www.netlify.com" target="_blank">netlify</a> for that. i have no opinions about hosting, netlify was just the one that came up first when i was following tutorials <br><br>
+these are all eventually connected to power your website. i strongly advocate for starting with a github account and linking everything there so that you’re organized from the start. </p>
+    <button class="popup-close">X</button>
+  </div>
+</div>  
+
+  
+  
+<!--yellow pig-->
+<img id="image6" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker8.png?v=1689151648213" class="popup-image image6" data-popup="#popup6">
+<div id="popup6" class="popup">
+  <div class="popup-content">
+     <h1> inspo </h1>
+    <p> i used to feel really exhausted by the internet while simultaneously longing for a way to better represent myself on it. i’m not a total off-the-grid advocate tbh. i think modern technology and the internet in particular are important facets to our cultural identity and in order to exist meaningfully in the present day, our active observation of and participation in the internet is vital. i started healing my relationship with the internet after exploring more of the niche/soft/small webs (is there an official name for it? i dont know). here are a few of those spaces and articles that i think are impactful: <br><br>
+✿ <a href="https://a-website-is-a-room.net/" target="_blank">a website is a room (classic holy grail resource)</a><br><br>
+✿ <a href="https://www.softspace.world/about.html" target="_blank">soft.space</a><br><br>
+✿ <a href="http://feral.earth/" target="_blank">feral.earth</a><br><br>
+✿ <a href="https://www.commondiscourse.xyz/" target="_blank">the common discourse substack</a><br><br>
+✿ <a href="https://escapethealgorithm.substack.com/p/why-arent-there-more-websites-about" target="_blank">escape the algorithm ft. chia amisola: why arent more websites about love?</a><br><br>
+there’s so much more out there… but i think these are good places to start. i think once you start pining for small websites, you open up a pandoras box of all these little corners of the internet. keep an archive of them! a really easy way to save websites/references is on <a href="https://are.na" target="_blank">are.na boards</a><br><br> </p>
+    <button class="popup-close">X</button>
+  </div>
+</div> 
+
+<!--toys r us-->
+<img id="image7" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker14.png?v=1689185785980" class="popup-image image7" data-popup="#popup7">
+<div id="popup7" class="popup">
+  <div class="popup-content">
+    <h1> play </h1>
+    <p> bestie, you’re not mark zuckerberg… and thank god for that. you are not here to build a new twitter, you are not here to shift a paradigm. you are here for yourself, for indulgence, and for fun… <i>especially</i> for fun. look at this page you’re on rn… do you think i built this with a straight face? there are times and places for structure—and you’re allowed that if you need it—but i challenge you to challenge yourself to re-experience the internet with more fluidity and expression. be silly, be clever, be tender, be the things that you like about yourself. the internet is infinite and so so public and because of that, it is quiet. create space for yourself and do whatever you want with it. you have the freedom to share it with everyone you know or to keep it to yourself and the lone web nomads who happen to stumble in.  you are free here! surrender! </p>
+    <button class="popup-close">X</button>
+  </div>
+</div> 
+
+<!--hello kitty-->
+<img id="image8" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker9.png?v=1689151649023" class="popup-image image8" data-popup="#popup8">
+<div id="popup8" class="popup">
+  <div class="popup-content">
+    <h1> where to start </h1>
+    <p> i suggest you make a <a href="https://github.com" target="_blank">github</a> account and <a href="https://docs.github.com/en/get-started/quickstart/hello-world" target="_blank">learn how to use it</a>.<br><br> i also use <a href="https://glitch.com” target=“_blank">glitch</a> to live code… it’s directly linked to my github and i push/pull as needed<br><br>
+next, start with a template of some sort<br><br>
+note: my first foray into html/css was by building my <a href="https://talyssa.com" target="_blank">digital garden</a> from a template <a href="https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll" target="_blank">by maxime vaillancourt</a> which i cloned into my github repository. if you look at the template and my digital garden side by side, they’re almost indistinguishable from each other now. but by starting with a pre-coded foundation, i was able to forego all worries about functionality and just start working it into something i wanted. <br><br>
+think about what you want to achieve with your page and then search for adjacent pages that already exist. i’ve found that a lot of niche internet communities are open source, meaning that the code and layouts they use are public and available to be copied in to your own repository. starting with a pre-built template ensures that your page will function the way you want it to. after you have this foundation, you can start customizing and morphing your page into something personal. whether it be changing the colors in css or adding new elements in html, every template should be as customizable as you want it to be. of course, you will inevitably mess things up, and things will break or misbehave but there are always solutions. <br><br>
+for stuff more like girlnet, take a look at: <br><br>
+✿ <a href="https://sadgrl.online/webmastery/layouts/" target="_blank">layouts by sadgrl</a><br><br>
+✿ <a href="https://repth.neocities.org/theme" target="_blank">neocities layouts</a><br><br>
+note: a lot of these little sites are hosted on <a href="https://neocities.org" target="_blank">neocities</a> which is worth looking into. i have never used it myself, but i am inspired by it. </p>
+    <button class="popup-close">X</button>
+  </div>
+</div> 
+  
+<!--unicorn-->
+<img id="image9" src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/girlnet_sticker12.png?v=1689185784358" class="popup-image image9" data-popup="#popup9">
+<div id="popup9" class="popup">
+  <div class="popup-content">
+     <h1> what is a static website </h1>
+    <p> static website: fixed, prebuilt page(s) <br><br>
+this differs from dynamic websites that are responsive to requests made by the user/audience <br><br>
+static websites are archival, meaning that they only change when you (the builder) choose to change them. with that said, they are great platforms for preservation. <br><br>
+what you’re ultimately looking at when you view a static website is the visual translation of an .html file (more on that later). all of the text and images you see are inserted directly into the html code. there is no “backend” or data collection. everything is very 1-to-1. static websites are managed very easily because of this because there’s no “maintenance” really. once something is built, it’s there until you decide to change things. </p>
+    <button class="popup-close">X</button>
+  </div>
+</div> 
+  
+  
+<!--load jquery libraries-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="inspire.js"></script>
+  
+<!-- close -->
+</body>
+</html>
