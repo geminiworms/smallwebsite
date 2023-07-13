@@ -108,17 +108,17 @@ header {
 
 
 .image2 {
-  /* sheetsites */
+  /* blue notebook */
   position: absolute;
   cursor: pointer;
   top: 30%;
-  left: 67%;
+  left: 71%;
   width: 200px;
   height: auto;
 }
 
 #popup2 {
-  /* sheetsites */
+  /* blue notebook */
   width: 400px;
   height: auto;
   top: 35%;
@@ -126,7 +126,7 @@ header {
 }
 
 .image3 {
-  /* resources */
+  /* fish */
   position: absolute;
   cursor: pointer;
   top: 62%;
@@ -136,7 +136,7 @@ header {
 }
 
 #popup3 {
-  /* resources */
+  /* fish */
   width: 300px;
   height: auto;
   top: 65%;
@@ -144,7 +144,7 @@ header {
 }
 
 .image4 {
-  /* ethos */
+  /* heart */
   position: absolute;
   cursor: pointer;
   top: 60%;
@@ -154,7 +154,7 @@ header {
 }
 
 #popup4 {
-  /* ethos */
+  /* heart */
   width: 200px;
   height: auto;
   top: 72%;
@@ -162,7 +162,7 @@ header {
 }
 
 .image-wrapper5 {
-  /* digital garden */
+  /* grass */
   position: absolute;
   top: 70%;
   left: 60%;
@@ -172,7 +172,7 @@ header {
 }
 
 .image-wrapper6 {
-  /* arena */
+  /* googly eye */
   position: absolute;
   top: 12%;
   right: 8%;
@@ -181,10 +181,38 @@ header {
 }
 
 .image-wrapper7 {
-  /* guestbook */
+  /* crayons */
   position: absolute;
   top: 40%;
   left: 2%;
+  width: auto; /* Adjust the width to make the target smaller */
+  height: 100px; /* Adjust the height to make the target smaller */
+}
+
+.image8 {
+  /* todo hammer */
+  position: absolute;
+  cursor: pointer;
+  top: 10%;
+  left: 55%;
+  width: 150px;
+  height: auto;
+}
+
+#popup8 {
+  /* todo hammer */
+  width: 200px;
+  height: 300px;
+  overflow-y: auto;
+  top: 3%;
+  left: 50%;
+}
+
+.image-wrapper9 {
+  /* sidekick */
+  position: absolute;
+   top: 74%;
+  left: 66%;
   width: auto; /* Adjust the width to make the target smaller */
   height: 100px; /* Adjust the height to make the target smaller */
 }
