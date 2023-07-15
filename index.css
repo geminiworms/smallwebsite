@@ -44,6 +44,31 @@ header {
     color: purple; /* Link color for visited links */
     }
 
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; /* this is the horizontal scrollbar */
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red; 
+}
+
 /* popup styling */
 .popup {
   display: none;
@@ -119,7 +144,7 @@ header {
 
 #popup2 {
   /* blue notebook */
-  width: 400px;
+  width: 300px;
   height: auto;
   top: 10%;
   left: 50%;
