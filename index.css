@@ -209,18 +209,18 @@ header {
   /* crayons */
   position: absolute;
   top: 40%;
-  left: 2%;
+  left: 0.5%;
   width: auto; /* Adjust the width to make the target smaller */
-  height: 100px; /* Adjust the height to make the target smaller */
+  height: auto; /* Adjust the height to make the target smaller */
 }
 
 .image8 {
   /* todo hammer */
   position: absolute;
   cursor: pointer;
-  top: 57%;
+  top: 50%;
   left: 20%;
-  width: 150px;
+  width: 175px;
   height: auto;
 }
 
