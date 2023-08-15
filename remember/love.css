@@ -1,0 +1,184 @@
+ 
+/* Small screens */
+@media (max-width: 768px) {
+  /* Your responsive styles for small screens */
+}
+
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Your responsive styles for medium screens */
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  /* Your styles for large screens */
+}
+
+
+    body{
+      background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/love.gif?v=1692053890006');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: serif;
+      background-color: white;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      overflow-y: none;
+    }
+    
+    header{
+      text-align: center;
+      margin: 1em;
+    }
+    
+    h1{
+      font-size:30px;
+      color:white;
+      font-family: serif;
+    }
+
+    h3{
+      font-size:18px;
+      color:white;
+    }
+    
+    h4{
+      color: white;
+      font-size: 20px;
+
+    }
+    
+    p{
+      font-size:15px;
+      line-height: normal;
+      color:white;
+    }
+
+    a {
+    color: blue; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: purple; /* Link color for visited links */
+    }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: left;
+
+}
+
+.everything {
+  position: relative;
+  background: black;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 275px;
+  height: auto;
+  left: 10%;
+  top: 16%;
+  opacity: 80%; 
+}
+
+audio {
+  position: relative;
+  top: 5%;
+  left: 5%;
+  height: 15px;
+
+}
+
+
+/* Styles for the pop-up window */
+#popup {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: auto;
+  padding: 20px;
+  background-color: black;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  z-index: 9999;
+  opacity: 80%;
+}
+
+
+
+#popup-content {
+  margin-bottom: 10px;
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size:15px;
+  line-height: normal;
+  color:white;
+}
+
+#popup-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  float: right;
+  color: white;
+}
+
+#popup-next,
+#popup-prev{
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#popup-trigger:hover {
+  background-color: black;
+  box-shadow: 0 5px 15px white;
+}
+
+
+.popup-title-bar {
+  background-color: black;
+  padding: 5px;
+  margin: -20px -20px 10px -20px;
+  border-bottom: 1px solid #999;
+  color: #333;
+  font-weight: bold;
+}
+
+#popup-trigger {
+  font-family: serif;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: black;
+  border: 1px solid #999;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
