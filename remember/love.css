@@ -66,10 +66,11 @@
 
 footer {
   position: fixed;
-  bottom: 0;
+  top: 2%;
+  right: 10%;
   width: 100%;
   padding: 10px 0;
-  text-align: left;
+  text-align: right;
 
 }
 
