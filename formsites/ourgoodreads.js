@@ -14,6 +14,7 @@ let stars = '';
 for (let i = 0; i < row.stars; i++) {
   stars += '★';
 }
+/* this sets stars as a symbol according to the number in the row.stars */
       
  let div = $(`<div class="item"> 
         <h5>` + '→ ' + row.Timestamp + `<h5>
