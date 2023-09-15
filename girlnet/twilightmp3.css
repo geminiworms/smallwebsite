@@ -1,0 +1,124 @@
+
+    
+    body{
+      font-family: monospace;
+      color: white;
+      background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/spidermonkey.gif?v=1694675453134');
+      background-size: cover; /* Cover the entire background */
+      background-repeat: no-repeat; /* Prevent the image from repeating */
+      background-attachment: fixed; /* Fixed background position */
+    }
+    
+    header{
+      text-align: center;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+    footer{
+      text-align: center;
+      margin-bottom: 10px;
+      max-width: 100%;
+    }
+
+
+h1,h2,h3,h4 {
+  font-family: sans-serif;
+}
+
+a {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: white; /* Link color for unvisited links */
+  transition: text-shadow 0.3s ease; /* Add transition for text-shadow */
+}
+
+a:hover {
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Add text-shadow on hover */
+}
+
+a:visited {
+  color: #ad3434; /* Link color for visited links */
+}
+    
+    /* code.js */
+    #content {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-direction: row;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    }
+
+    .item {
+      width: 200px;
+    }
+    
+    /* codeusingtable.js */
+    table{
+      margin: 0 auto;
+      text-align: left;
+      font-size: 15px;
+    }
+    
+    td{
+      padding: 6px;
+    }
+
+th{
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px;
+  text-align: center;
+
+}
+
+/* COLUMNS */
+
+.left-column,
+.right-column {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px white;
+  height: 700px;
+  overflow: auto;
+  overflow-x: auto;
+}
+
+.left-column {
+  flex: 15%; /* Set the left column to occupy 20% of the available space */
+  margin-right: 20px;
+}
+
+.right-column {
+  flex: 85%; /* Set the right column to occupy 80% of the available space */
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link id="favicon" rel="icon" href="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twilight-apple.jpg?v=1694722042975" type="image/x-icon">
+  <title>twilight playlist notes</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+<!--   styling goes here   -->
+    <link rel="stylesheet" href="./twilightmp3.css" type="text/css" />
+
+<!--glitter cursor -->
+<script type="text/javascript">
+// <![CDATA[
+var colour="#FFFFFF";
+var sparkles=120;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+* (c) 2005 mf2fm web-design *
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmousemove=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+// ]]>
+</script>
+
+    
+    
+</head>
+<body>
+<!--  content begins here  --> 
+<!--  #content, in styling/JS  -->
+<div id="content">
+  
+<!-- LEFT COLUMN -->
+<div class="left-column">
+<a href="https://www.glitter-graphics.com"><img src="http://dl.glitter-graphics.net/pub/989/989321gyey13hzit.gif" width="100%" height="auto" border=0></a>
+  <h3>
+    tldr; i shared my twilight playlist on <a href="https://www.tiktok.com/@unearthworms/video/7277673110294351135?is_from_webapp=1&sender_device=pc&web_id=7263548003100804650" target="_blank">tiktok</a> and it blew up
+  </h3>
+ <p>
+    here's the playlist on spotify: <br><br>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6OV58jUPJavI0e53AiCMM0?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> <br><br>
+ 
+   <a href="https://www.glitter-graphics.com"><img src="http://dl.glitter-graphics.net/pub/989/989321gyey13hzit.gif" width="100%" height="auto" border=0></a>
+   <br><br>
+  on september 11th, 2023 i posted an innocent tiktok exposing the 2hr and 39min playlist i created in january of the same year. this playlist, 'the twilight saga (i dont want to talk about this)' was immediately adopted by the thousands. thus, deeming 9/11/2023 a momentous day we will never forget. <br><br>
+  this playlist is basically the sonic moodboard for the day A24 happens to stumble upon the rights to the twilight saga and turns it into a multi-season TV series. <br><br> 
+  it's <i>extremely important</i> to note that i have no disrespect for the existing movies because they served their purpose. <br><br>
+   
+<a href="https://www.glitter-graphics.com"><img src="http://dl.glitter-graphics.net/pub/989/989321gyey13hzit.gif" width="100%" height="auto" border=0></a>
+  <h3>UNFORTUNATELY, THIS WEBSITE IS NOT MOBILE FRIENDLY</h3> if you want to see the notes, you can take a <a href="https://docs.google.com/spreadsheets/d/1t5blu8G5X7AP7bQ0IR3jeNqyX0Fo4kYt8_5XkUVtGE0/edit?usp=sharing" target="_blank">look at the spreadsheet</a> which is always in-sync with the content on the webpage... if you get the chance to check it out on desktop though, please do :)
+ <br><br>
+
+<a href="https://www.glitter-graphics.com"><img src="http://dl.glitter-graphics.net/pub/989/989321gyey13hzit.gif" width="100%" height="auto" border=0></a>
+  <h3>anyways...</h3>
+  my name is talyssa and i build static webpages as a creative hobby. <br>
+  this one in particular is in line with the ethos of <a href="/girlnet/home.html" target="_blank">girlnet</a> which is the meterialization of my interest in the highly customizable internet of the early 2000s. a lot of my resources and other little pieces can be found on <a href="/" target="_blank">smallweb.site</a> which is a landing page of sorts. none of it is mobile friendly bc i dont know how to do that very well lol. <br><br>
+<a href="https://www.glitter-graphics.com"><img src="http://dl.glitter-graphics.net/pub/989/989321gyey13hzit.gif" width="100%" height="auto" border=0></a><br><br>
+if you have any questions or just want to learn more, feel free to reach out: <br>
+  ♥ <a href="https://instagram.com/talyssa.jpg" target="_blank">instagram</a><br>
+  ♥ <a href="https://www.tiktok.com/@unearthworms" target="_blank">tiktok</a><br>
+  
+ </p>
+  
+ <!-- blinkies -->
+  <a href="https://www.glitter-graphics.com"><img src="http://dl6.glitter-graphics.net/pub/1551/1551266m97s2fu2hc.gif" width="100%" height="auto" border=0></a>
+  <a href="https://www.glitter-graphics.com"><img src="http://dl7.glitter-graphics.net/pub/1834/1834807q2cjqpp2xm.gif" width="100%" height="auto" border=0></a>
+  
+    <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink3.gif?v=1694721157895" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink4.gif?v=1694721158184" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink5.gif?v=1694721158510" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink6.gif?v=1694721158850"width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink7.gif?v=1694721159157" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink9.gif?v=1694721159748" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink10.gif?v=1694721160027" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink11.gif?v=1694721160307" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink12.gif?v=1694721160693" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink13.gif?v=1694721161008" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink14.gif?v=1694721164959" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink15.gif?v=1694721165296" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink16.gif?v=1694721166724" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink17.gif?v=1694721169987" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink18.gif?v=1694721171944" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink19.gif?v=1694721157201" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink8.gif?v=1694721159471" width="100%" height="auto" border=0></a>
+   <a href="https://blog.spacehey.com/entry?id=408809"><img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/twblink1.gif?v=1694721460188" width="100%" height="auto" border=0></a>
+  
+  
+  
+  </div>
+  
+<div class="right-column">
+
+
+<table>
+      <th>BOOK</th>
+      <th>PAGE</th>
+      <th>SONG</th>
+      <th>ARTIST</th>
+      <th></th>
+      <th></th>
+      <th>NOTE</th>
+    </table>
+
+
+  </div>
+</div>
+  
+<footer>
+      <p>
+          made by <a href="/about/about.html" target="_self">talyssa</a> ♡ updated september 2023
+      </p>
+<!--  Javascript goes here... sorry we're using jquery -->
+  <script src="//code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+  <script src="twilightmp3.js" type="text/javascript"></script>
+</body></html>
