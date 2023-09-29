@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin to take up the full width */
+    overflow: hidden; /* Hide horizontal overflow */
+    margin-top: 5%;
+}
+
+/* marquees */
+.marquee-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.marquee {
+    white-space: nowrap;
+    padding: 10px;
+    width: 100%; /* Set the width to 100% to take up the full width */
+    animation: scrollText 0s linear infinite;
+}
+
+/* list */
+#list { 
+    width: auto;
+    background-color: none;
+    color: black;
+    font-size: 12px;
+    animation: scrollText 0s linear infinite;
+}
+
+/* work */
+#work {
+    width: auto;
+    font-family: monospace;
+    background-color: none;
+    color: black;
+    font-size: 14px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* internet */
+#internet {
+    width: auto;
+    font-family: cursive;
+    background-color: none;
+    color: black;
+    font-size: 14px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* thoughts */
+#thoughts {
+    width: auto;
+    font-family: serif;
+    font-style: oblique;
+    background-color: none;
+    color: black;
+    font-size: 35px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* notes */
+#notes {
+    width: auto;
+    font-family: monospace;
+    font-style: normal;
+    background-color: none;
+    color: black;
+    font-size: 28px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* love */
+#love {
+    width: auto;
+    font-family: cursive;
+    font-style: oblique;
+    background-color: none;
+    color: black;
+    font-size: 20px;
+    animation: scrollText 0s linear infinite;   
+}
+
+/* identity */
+#identity {
+    width: auto;
+    background-color: none;
+    color: black;
+    font-size: 20px;
+    animation: scrollText 0s linear infinite;   
+}
+
+/* observations */
+#observations {
+    width: auto;
+    background-color: none;
+    color: black;
+    font-size: 40px;
+    animation: scrollText 0s linear infinite;   
+}
+
+/* affirm */
+#affirm {
+    width: auto;
+    font-family: monospace;
+    font-style: oblique;
+    background-color: none;
+    color: black;
+    font-size: 18px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* deny */
+#deny {
+    width: auto;
+    font-family: serif;
+    background-color: none;
+    color: black;
+    font-size: 16px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* lyrics */
+#lyrics {
+    width: auto;
+    font-family: sans-serif;
+    font-style: oblique;
+    background-color: none;
+    color: black;
+    font-size: 12px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+/* noise */
+#noise1 {
+    width: auto;
+    background-color: none;
+    color: black;
+    font-size: 14px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+#noise2 {
+    width: auto;
+    font-family: cursive;
+    background-color: none;
+    color: black;
+    font-size: 10px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+#noise3 {
+    width: auto;
+    background-color: none;
+    color: black;
+    font-size: 20px;
+    animation: scrollText 0s linear infinite;
+    
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
+}

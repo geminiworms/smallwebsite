@@ -1,0 +1,56 @@
+    body{
+      font-family: monospace;
+      font-style: oblique;
+      margin-left: 20px;
+    }
+    
+    header{
+      text-align: right;
+      margin: 1em;
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+    header a {
+    color:black; /* Link color for unvisited links */
+    }
+
+    header a:visited {
+    color: red; /* Link color for visited links */
+    }
+  
+
+    img{
+      display: inline-block;
+      width: 190px; 
+      padding: 0rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+ 
+    h1{
+      font-size:30px;
+    }
+    
+    h3{
+      font-size:18px;
+      color:black;
+    }
+    
+    h4{
+      font-size:15px;
+    }
+    
+    p{
+      font-size:15px;
+      line-height: normal;
+      color:black;
+    }
+    
+    a {
+    color:black; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: #38ccd6; /* Link color for visited links */
+    }
+    
