@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* CSS for the display container with dynamic columns */
+#display-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 3 dynamic columns */
+  gap: 10px; /* Adjust the gap between cells as needed */
+  justify-items: center; /* Center items horizontally in each column */
+  align-items: center; /* Center items vertically in each column */
+  text-align: center; /* Center text inside cells */
+}
+
+#string-display {
+  font-size: 18px;
+}
+
+

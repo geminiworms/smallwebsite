@@ -1,0 +1,92 @@
+/* loading in assets */
+
+
+@font-face {
+  font-family: 'virale'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/virale.ttf?v=1689398391789') format('ttf'),
+}
+
+@font-face {
+  font-family: 'basiic'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/basiic.ttf?v=1689398260075') format('ttf'),
+}
+
+
+
+/* general page styling */
+
+header {
+  text-align: center; /* Center the text content horizontally */
+  font-family: serif;
+  font-style: oblique;
+}
+
+
+body {
+  align-items: center;
+  justify-content: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: white;
+  font-color: white;
+}
+
+
+
+
+/* within the screen */
+#screen {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vh; /* Set a specific width (adjust as needed) */
+  height: 70%; /* Set a specific height (adjust as needed) */
+  background-color: white;
+  /* border: 2px dotted black; */
+  /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.50); */
+}
+
+#screen h1{
+  font-family: Arial, sans-serif;
+  font-style: oblique;
+}
+
+#screen h3{ /* styles the ASCII */
+  font-family: Courier New, Courier, monospace; 
+  font-size: 18px;
+}
+
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center contents horizontally */
+  justify-content: center; /* Center contents vertically */
+  width: 100%; /* Take up the full width of #screen */
+  height: 100%; /* Take up the full height of #screen */
+  text-align: center;
+}
+
+#display-container {
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border: red;
+  text-align: center;
+  font-family: serif;
+  font-size: 24px;
+  font-style: oblique;
+  margin-bottom: 20px; /* Add margin between display-container and button */
+}
+
+#refresh-button {
+  padding: 10px;
+  width: 100px; /* Set a fixed width for the button */
+  height: 40px; /* Set a fixed height for the button */
+  background-color: white;
+  font-size: 24px; /* Adjust font size as needed */
+  border: none;
+  cursor: pointer;
+}
