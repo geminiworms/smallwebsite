@@ -1,0 +1,101 @@
+/* COLORS
+LIGHT BLUE: #edf2fa
+DARK BLUE: #0008ff
+BLACK:  #1c1c24
+WHITE
+*/
+
+body {
+  font-family: monospace;
+  background-color: #edf2fa;
+  max-width: 100%;
+  height: 100%;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+header {
+  text-align: left;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+
+}
+
+header p{
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  font-style: oblique;
+  line-height: normal;
+  color: #1c1c24;
+}
+
+h1 {
+  font-size: 30px;
+  color: #1c1c24;
+  font-family: sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  color: #1c1c24;
+}
+
+h4 {
+  font-size: 15px;
+  color: #1c1c24;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  font-style: oblique;
+  line-height: normal;
+  color: #1c1c24;
+
+}
+
+a {
+  color: #960000;
+}
+
+a:visited {
+  color: #913131;
+}
+
+#content {
+  position: relative;
+  max-width: 100%;
+  height: 100vh; /* Adjusted height to account for the header */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.letter {
+  
+  position: absolute;
+  border: 1px solid #1c1c24;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fcfaf2;
+  opacity: 80%;
+  cursor: pointer;
+  z-index: 10000; /* Ensure "letter" divs are above header */
+}
+
+.letter p{
+ text-align: center;
+ color: #1c1c24;
+ font-family: monospace;
+ font-style: normal;
+ font-size: 12px;
+}
