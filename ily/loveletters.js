@@ -11,9 +11,12 @@ var SPREADSHEET_ID_AND_TAB = "1QT9Dz51XQw9moaxJXxCcuTLIeukunDOdfa7vUzUNedQ/1"; /
 $(document).ready(function () {
   $.getJSON("https://opensheet.elk.sh/" + SPREADSHEET_ID_AND_TAB, function (data) {
     data.forEach(function (row, index) {
+      // Check if row.identity is defined and not empty
+      var identity = row.identity || "anon"; // Use an empty string if it's undefined or empty
+
       let div = $(`<div class="letter"> 
           <p>` +  row.letter + `</p>
-          <p>` +  row.identity + `</p>
+          <p>` + 'sincerely, '+  identity + `</p>
           </div>`)
           .css("top", getRandomInt(0, 80) + "%")
           .css("left", getRandomInt(0, 90) + "%")
