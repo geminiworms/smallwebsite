@@ -2,20 +2,22 @@
       font-family: monospace;
       font-style: oblique;
       margin-left: 20px;
+      width: 30%;
+      text-align: right;
     }
     
     header{
-      text-align: right;
+      text-align: left;
       margin: 1em;
       margin-bottom: 20px;
       margin-right: 20px;
     }
     header a {
-    color:black; /* Link color for unvisited links */
+    color:blue; /* Link color for unvisited links */
     }
 
     header a:visited {
-    color: red; /* Link color for visited links */
+    color: purple; /* Link color for visited links */
     }
   
 
@@ -47,10 +49,10 @@
     }
     
     a {
-    color:black; /* Link color for unvisited links */
+    color:blue; /* Link color for unvisited links */
     }
 
     a:visited {
-    color: #38ccd6; /* Link color for visited links */
+    color: purple; /* Link color for visited links */
     }
     

@@ -1,0 +1,100 @@
+
+    body{
+      background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/DSCN2007.jpg?v=1700446737666');
+      background-position: center;
+      background-repeat: repeat;
+      background-size: auto;
+      font-family: serif;
+      background-color: white;
+      max-width: 100vh;
+      text-align: center;
+      margin: 0 auto;
+      overflow-y: auto;
+    }
+    
+    header{
+      text-align: center;
+      margin: 1em;
+    }
+    
+    h1{
+      font-size:30px;
+      color:white;
+      font-family: serif;
+    }
+
+    h3{
+      font-size:18px;
+      color:white;
+    }
+    
+    h4{
+      color: white;
+      font-size: 20px;
+
+    }
+    
+    p{
+      font-size:15px;
+      line-height: normal;
+      color:white;
+    }
+
+.poem1 {
+  position: absolute;
+  text-align: left;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  left: 5%;
+  top: 20%;
+  opacity: 80%; 
+}
+
+.poem1 p{
+  font-size: 20px;
+  font-family: serif;
+}
+
+.poem2 {
+  position: absolute;
+  left: 2%;
+  bottom: 10%;
+  opacity: 80%;
+
+}
+
+.poem2 marquee{
+  width: 60%;
+  color: white;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-style: oblique;
+  text-align: center;
+}
+
+.poem3{
+  position: absolute;
+  text-align: right;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  right: 10%;
+  bottom: 27%;
+  opacity: 80%; 
+}
+
+.poem3 p{
+  font-size: 16px;
+  font-family: serif;
+  font-style: oblique;
+}
+
+
+    a {
+    color: blue; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: purple; /* Link color for visited links */
+    }
