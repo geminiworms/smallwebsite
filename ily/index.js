@@ -21,7 +21,7 @@ $(document).ready(function () {
         displayContainer.textContent = randomCellValue;
       }
     }
- refreshButton.innerHTML = "💞";
+ refreshButton.innerHTML = "";
     // Event listener for the refresh button
     refreshButton.addEventListener("click", displayRandomCell);
 

@@ -17,8 +17,8 @@
 
 header {
   text-align: center; /* Center the text content horizontally */
-  font-family: serif;
-  font-style: oblique;
+  font-family: sans-serif;
+  font-style: normal;
 }
 
 
@@ -31,6 +31,21 @@ body {
   font-color: white;
 }
 
+footer {
+    position: fixed; /* Fixed position so it stays at the bottom of the viewport */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Take the full width of the viewport */
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.image-class {
+    width: 500px; /* Set the desired width */
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+}
 
 
 
@@ -75,18 +90,28 @@ body {
   background-color: white;
   border: red;
   text-align: center;
-  font-family: serif;
-  font-size: 24px;
-  font-style: oblique;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: normal;
   margin-bottom: 20px; /* Add margin between display-container and button */
 }
 
 #refresh-button {
   padding: 10px;
-  width: 100px; /* Set a fixed width for the button */
-  height: 40px; /* Set a fixed height for the button */
-  background-color: white;
-  font-size: 24px; /* Adjust font size as needed */
-  border: none;
-  cursor: pointer;
+  width: 70px; /* Set a fixed width for the button */
+  height: 70px; /* Set a fixed height for the button */
+  background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/refreshbutton1.png?v=1707025544791');
+  background-color: transparent;
+  background-size: cover; /* Make sure the background image covers the entire button */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
+
+    a {
+    color:black; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: blue; /* Link color for visited links */
+    }
+    

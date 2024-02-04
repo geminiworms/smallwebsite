@@ -17,6 +17,7 @@ body {
 
 header {
   text-align: left;
+  background-color: transparent;
   width: 150px;
   margin: 0;
   padding: 0;
