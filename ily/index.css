@@ -21,6 +21,14 @@ header {
   font-style: normal;
 }
 
+/* Navigation Links */
+header p {
+    display: flex;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+    justify-content: center; /* Center links horizontally */
+    gap: 10px; /* Add spacing between links */
+    padding: 10px; /* Add padding for better spacing */
+}
 
 body {
   align-items: center;
@@ -43,7 +51,7 @@ footer {
 
 
 .image-class {
-    width: 500px; /* Set the desired width */
+    width: 100%; /* Set the desired width */
     height: auto; /* Let the height adjust automatically to maintain aspect ratio */
 }
 
