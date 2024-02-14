@@ -39,6 +39,8 @@ body {
   font-color: white;
 }
 
+
+
 footer {
     position: fixed; /* Fixed position so it stays at the bottom of the viewport */
     left: 0; /* Align to the left */
@@ -64,11 +66,18 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60vh; /* Set a specific width (adjust as needed) */
-  height: 70%; /* Set a specific height (adjust as needed) */
+  width: 100vh; /* Set a specific width (adjust as needed) */
+  height: auto; /* Set a specific height (adjust as needed) */
   background-color: white;
   /* border: 2px dotted black; */
   /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.50); */
+}
+
+#screen img {
+  display: flex;
+  width: 50vh;
+  height: auto;
+  margin: 0; /* Remove default padding */
 }
 
 #screen h1{
