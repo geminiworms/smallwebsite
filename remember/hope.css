@@ -1,0 +1,140 @@
+   body{
+      font-family: monospace;
+      background-color: #f2ece1;
+      max-width: 90%;
+      text-align: left;
+      margin: 0 auto;
+
+  }
+    
+    
+    header{
+      text-align: center;
+      margin: 1em;
+      color: #3746e6;
+    }
+    
+    /*img{
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }*/
+
+    img{
+      display: inline-block;
+      width: 190px; 
+      padding: 0rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+.custom-hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(50, 38, 31, 0.1);  /* Change to any color you prefer */
+  margin: 20px 0;
+}
+    
+    h1{
+      font-size:30px;
+      font-family: sans-serif;
+    }
+    h3{
+      font-size:18px;
+      color:#3746e6;
+
+    }
+    
+    h2{
+      font-size:20px;
+      font-style: italic;
+      color:#3746e6;
+
+    }
+    
+    h4{
+      font-size:15px;
+      color: #3746e6;
+    }
+    
+   h5 {
+  font-size: 14px;
+  line-height: normal;
+  color: #0d9114;
+  padding: 5px 10px; /* Padding for space inside the border */
+  border: 1px solid #0d9114; /* Define border width, style, and color */
+  border-radius: 40px; /* Rounded corners */
+  display: inline-block; /* Makes border fit tightly around text */
+}
+    
+    p{
+      font-size:13.5px;
+      line-height: normal;
+      color:#32261f;
+    }
+    
+    a {
+    color: #3746e6; /* Link color for unvisited links */
+    }
+
+    a:visited {
+    color: #1c2475; /* Link color for visited links */
+    }
+    
+    /* code.js */
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-contet: flex-start;
+      margin: 20px;
+    }
+
+    
+    /* codeusingtable.js */
+    table{
+      margin: 0 auto;
+    }
+    
+    td{
+      padding: 0px;
+    }
+ 
+/* Style for the navigation buttons */
+nav button {
+  background-color: transparent; /* Light background color */
+  border: 1px solid #0d9114; /* Light gray border */
+  color: #0d9114; /* Darker text color */
+  padding: 5px 10px; /* Padding for button size */
+  margin: 5px; /* Space between buttons */
+  border-radius: 40px; /* Rounded corners */
+  display: inline-block;
+  cursor: pointer; /* Pointer cursor for buttons */
+  font-size: 12px; /* Font size */
+  font-family: monospace;
+  transition: background-color 0.3s, color 0.3s;  /*  Smooth transition for hover effects */
+}
+
+/* Hover effect for buttons */
+nav button:hover {
+background-color: #0d9114;
+color: #f2ece1;
+}
+
+
+/* Active/selected button styling */
+nav button.active {
+  font-weight: bold; /* Make the selected button bold */
+  background-color: #0d9114; /* Darker background */
+  color: #f2ece1; /* White text for contrast */
+}
+
+/* Style for the category description */
+#category-description {
+  text-align: center;
+  color: #0d9114;
+  
+}
+
