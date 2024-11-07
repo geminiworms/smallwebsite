@@ -35,8 +35,12 @@ $(document).ready(function () {
         <p>` +  row.intentions + `</p>
         </div>`)
       .appendTo("#content"); // # refers to div id
+      
+      console.log(row.img_url);  // Check if the correct image URL is being logged
+
     });
   });
 });
+
 
 
