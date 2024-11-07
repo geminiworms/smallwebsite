@@ -30,6 +30,13 @@
       text-overflow: ellipsis;
     }
     
+.custom-hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(50, 38, 31, 0.1);  /* Change to any color you prefer */
+  margin: 20px 0;
+}
+    
     h1{
       font-size:30px;
       font-family: sans-serif;
