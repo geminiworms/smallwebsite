@@ -14,7 +14,7 @@ $(document).ready(function () {
       let categories = row.category.split(',').map(c => c.trim()).join(' ');
       let div = $(`<div class="item" data-category="${categories}">
         <h3><a href="${row.link}" target="_blank">${row.title}</a></h3>   
-        <p>> ${row.Timestamp} by ${row.identity}</p>
+        <p>> ${row.date} by ${row.identity}</p>
         <p>${row.note}</p>
         <h5>${row.category}</h5>
         <hr class="custom-hr">
