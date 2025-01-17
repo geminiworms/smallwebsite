@@ -1,10 +1,13 @@
    body{
       font-family: monospace;
-      background-color: #f2ece1;
+      background-image: url('https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/minecraft1.jpg?v=1689185414077');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       height: 100%;
       text-align: left;
       margin: 0;
-     overflow-y: auto;
+     overflow-y: hidden;
 
   }
     
@@ -12,8 +15,37 @@
     header{
       text-align: center;
       margin: 1em;
-      color: #3746e6;
+      color: #fff8eb;
     }
+
+   header p{
+      color: #fff8eb;
+      text-shadow:1px 1px 3px #0d9114, 1px 1px 3px #0d9114;
+    }
+
+ .container {
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+   overflow-y: hidden;
+    flex-direction: row;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+  }
+
+.body-column {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 1px white;
+  height: 700px;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
     
     /*img{
       width: 100%;
@@ -40,24 +72,25 @@
     
     h1{
       font-size:30px;
+      text-shadow:1px 1px 3px #0d9114, 1px 1px 3px #0d9114;
       font-family: sans-serif;
     }
     h3{
       font-size:18px;
-      color:#3746e6;
+      color: #0d9114;
 
     }
     
     h2{
       font-size:20px;
       font-style: italic;
-      color:#3746e6;
+      color: #0d9114;
 
     }
     
     h4{
       font-size:15px;
-      color: #3746e6;
+      color: #0d9114;
     }
     
    h5 {
@@ -73,15 +106,15 @@
     p{
       font-size:13.5px;
       line-height: normal;
-      color:#32261f;
+      color:#fff8eb;
     }
     
     a {
-    color: #3746e6; /* Link color for unvisited links */
+    color: #fff8eb;
     }
 
     a:visited {
-    color: #1c2475; /* Link color for visited links */
+    color: #fff8eb; /* Link color for visited links */
     }
 
 footer {
@@ -92,8 +125,11 @@ footer {
     /* code.js */
     #content {
       display: block;
+      background: rgb(0, 0, 0, .3);
+      border-radius: 10px;
       justify-content: flex-start;
       align-contet: flex-start;
+      padding: 20px;
       margin: 20px;
       height: 100%;
       overflow-y: auto;
@@ -143,6 +179,31 @@ nav button.active {
 #category-description {
   text-align: center;
   color: #0d9114;
+  text-shadow: none;
   
 }
 
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff8eb; 
+}

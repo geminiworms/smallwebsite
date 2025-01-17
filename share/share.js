@@ -3,7 +3,7 @@ var SPREADSHEET_ID_AND_TAB = "1NEC0SdTEB6X0daoUHN50svEdWdGvE6-ojcrloQy-1Aw/1";
 // Define descriptions for each category
 const categoryDescriptions = {
   all: ":everything",
-  Learn: ":challenge what we know",
+  Learn: ":who, what, where, why, when, & how to",
   Nurture: ":take care of yourself & others",
   Play: ":create & inspire"
 };
