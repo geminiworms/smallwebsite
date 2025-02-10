@@ -58,6 +58,59 @@ footer {
 }
 
 
+/* General Modal Styling */
+.modal {
+  font-family: monospace;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+}
+
+/* About Modal Position */
+#about-modal {
+  left: 10%;
+  top: 15%;
+}
+
+/* Read Modal Position */
+#read-modal {
+  left: 60%;
+  top: 15%;
+}
+
+.modal-content {
+  position: absolute;
+  border: 1px solid #1c1c24;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  /* border-radius: 10px; */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fcfaf2;
+  opacity: 80%;
+  pointer-events: auto;
+}
+
+.close-button {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Styling links inside the read modal */
+#read-modal a {
+  color: blue;
+  text-decoration: none;
+}
+
+#read-modal a:hover {
+  text-decoration: underline;
+}
+
 
 /* within the screen */
 #screen {

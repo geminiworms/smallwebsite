@@ -29,3 +29,22 @@ $(document).ready(function () {
     displayRandomCell();
   });
 });
+
+$(document).ready(function() {
+  // About Modal
+  $("#about-link").click(function(event) {
+    event.preventDefault();
+    $("#about-modal").show();
+  });
+
+  // Read Modal
+  $("#read-link").click(function(event) {
+    event.preventDefault();
+    $("#read-modal").show();
+  });
+
+  // Close Buttons
+  $(".close-button").click(function() {
+    $(this).closest(".modal").hide();
+  });
+});
