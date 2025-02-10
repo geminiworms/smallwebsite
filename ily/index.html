@@ -15,14 +15,18 @@
 <body>
 <header>
 <p> 
-<marquee behavior="scroll" direction="left">
+<!-- old marquee 
+  <marquee behavior="scroll" direction="left">
 <b>this is an ongoing project about love.</b> a while back, the words "i love you" stopped meaning anything to me. i stopped believing them. everytime i fell into a pocket of insecurity, i found myself craving more words; ones that told me exactly what they meant by love. but all i ever got was "i love you" over and over again. and so i started doing this exercise in my notes app and through it, i found better ways to recognize love within myself and in others... and ways to express love with intentionality and specificity. it came up again a few months later with my dear friend kristina who found herself "struggling with cheap i love yous" in the highs of new love. i told her about this, and it evolved into a whole data table on alternate forms of "i love you". here's where that data ended up, i hope you love it.
-</marquee>
-  <a href="index.html" target="_blank">home</a>
+</marquee> -->
+  <a href="https://smallweb.site" target="_blank">home</a>
+  <a href="#" id="about-link">about</a> <!-- Added "About" link -->
+  <a href="#" id="read-link">read</a> <!-- Added "About" link -->
   <a href="/ily/loveletters.html" target="_blank">letters</a>
-  <a href="https://talyssa.substack.com/p/desire-path-i-want-to-turn-into-you" target="_blank">read</a>
   </p>
   <!-- header needs to have links to: home, about /ily, everyway, loveletters-->
+
+
 </header>
 
 <div id= "screen">
@@ -37,11 +41,39 @@
 ░░█░░░░█░█░█▀▀░█▀█░█░█░░░░░░░░░     
 ░▀▀▀░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀░░▀░░▀░     </pre></h3><br>-->
   
+  
 <img src="https://cdn.glitch.global/413e5956-791d-4fa2-a850-40e6e17d90ec/whenisayily.png?v=1707025309876" class="image-class" id="image-1"><br><br>  
   <div id="display-container"></div> <button id="refresh-button"></button>
 </div>
-</div>  
+</div> 
   
+  <!-- About pop up -->
+<div id="about-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <p><b>this is an ongoing project about love</b><br><br>
+      it started as an exercise i'd do in my notes app to ground myself off of blanket statement, band-aid "i love yous"... <br>
+      but it had the unexpected benefit of helping me practice self love (sorry, buzzword, dont know what else to call it though) with
+      more refined intentions and greater specificity. it came up again months later when my dear friend kristina told me she was "struggling with <br>
+      cheap <i>i love yous</i> in the highs of new love"... i shared this with her and it snowballed into a spreadsheet of all the alternate ways
+      you can say it. <br>
+    </p>
+  </div>
+</div> 
+  
+    <!-- Reading pop up -->
+<div id="read-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <p><b>relevant journal entries</b><br>
+       &hearts; <a href="https://talyssa.substack.com/p/desire-path-i-want-to-turn-into-you" target="_blank">desire path, i want to turn into you</a><br>
+       &hearts; <a href="https://talyssa.substack.com/p/love-in-the-time-of-apple-vision" target="_blank">love in the time of apple vision pro (computer love)</a><br>
+       &hearts; <a href="https://talyssa.substack.com/p/happy-valentines-day-pretend-everything" target="_blank">the mary's room of it all</a><br>
+      &hearts; <a href="https://talyssa.substack.com/p/the-birthday-edit" target="_blank">pic of me loving my friends</a><br>
+    </p>
+  </div>
+</div> 
+
 
   
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
